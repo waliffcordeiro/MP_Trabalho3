@@ -1,0 +1,53 @@
+\hypertarget{contador_8h}{}\section{contador.\+h File Reference}
+\label{contador_8h}\index{contador.\+h@{contador.\+h}}
+
+
+Módulo que contém apenas a função que realiza a contagem de linhas. A função contém todo o código necessário. seus procedimentos internos estão implementados de maneira clara e devidamente comentados.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for contador.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{contador_8h_add33cd6495d2e88494052be6126605d5}{contador} (char nome\+Arquivo\mbox{[}$\,$\mbox{]}, int linhas\+\_\+comentarios, int linhas\+\_\+vazias)
+\begin{DoxyCompactList}\small\item\em Função que conta a quantidade de linhas de código útil em um programa na linguagem C. O programa também mantém o registro do número de linhas em branco, comentadas e totais, de maneira que com uma simples subtração é possível obter o número de linhas úteis no arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Módulo que contém apenas a função que realiza a contagem de linhas. A função contém todo o código necessário. seus procedimentos internos estão implementados de maneira clara e devidamente comentados. 
+
+\begin{DoxyAuthor}{Author}
+Waliff Cordeiro Bandeira 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{contador.\+h@{contador.\+h}!contador@{contador}}
+\index{contador@{contador}!contador.\+h@{contador.\+h}}
+\subsubsection[{\texorpdfstring{contador(char nome\+Arquivo[], int linhas\+\_\+comentarios, int linhas\+\_\+vazias)}{contador(char nomeArquivo[], int linhas_comentarios, int linhas_vazias)}}]{\setlength{\rightskip}{0pt plus 5cm}int contador (
+\begin{DoxyParamCaption}
+\item[{char}]{nome\+Arquivo\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{linhas\+\_\+comentarios, }
+\item[{int}]{linhas\+\_\+vazias}
+\end{DoxyParamCaption}
+)}\hypertarget{contador_8h_add33cd6495d2e88494052be6126605d5}{}\label{contador_8h_add33cd6495d2e88494052be6126605d5}
+
+
+Função que conta a quantidade de linhas de código útil em um programa na linguagem C. O programa também mantém o registro do número de linhas em branco, comentadas e totais, de maneira que com uma simples subtração é possível obter o número de linhas úteis no arquivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & nome\+Arquivo\mbox{[}\mbox{]} -\/ nome do arquivo de entrada, que será inicializado dentro da função \\
+\hline
+{\em int} & linhas\+\_\+comentadas -\/ flag verificadora \\
+\hline
+{\em int} & linhas\+\_\+vazias -\/ flag verificadora\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ retorna o número de linhas úteis da função 
+\end{DoxyReturn}

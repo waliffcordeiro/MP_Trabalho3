@@ -1,0 +1,6 @@
+Waliff Cordeiro Bandeira - 17/0115810
+
+Para compilar o programa foi feito um make no diretório source conforme as especificações
+Para executar foi gerado o executável teste (./testes). Para executar basta digitar ./testes .
+O padrão cpplint e cppcheck foi testado usando, por exemplo, cpplint contador.c (e o nome do arquivo desejado)
+o PDF (Laudo) contendo os requisitos usados da checklist seguem em anexo.

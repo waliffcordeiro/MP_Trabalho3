@@ -17,11 +17,17 @@ TEST_CASE("Código sem espaços e com comentários"){
 
 //A função irá contar linhas num código que contém espaços em branco
 TEST_CASE("Código com espaços"){	
-	REQUIRE(contador("../testes/teste2.c",1,1) == 8);
+	REQUIRE(contador("../testes/teste2.c",1,1) == 10);
 }
 
 //a função irá contar linhas num código que contém espaços em brancos e comentário do tipo "//"
 TEST_CASE("Código com espaços e comentários"){
 
-	REQUIRE(contador("../testes/teste4.c",1,1) == 8);
+	REQUIRE(contador("../testes/teste4.c",1,1) == 10);
+}
+
+// A função irá contar linhas num código que contém espaços em branco e comentários
+// do tipo "//" e "/*  */"
+TEST_CASE("Código com comentários dos dois tipo e espaços"){
+	REQUIRE(contador("../testes/test5.c",1,1) == 10);
 }

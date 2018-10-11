@@ -2,6 +2,32 @@
 
 // "Copyright [2018] <Copyright Waliff Cordeiro>"
 
+/*********************************************************************
+Função contador
+
+Descrição:
+
+A função abaixo é a responsável pelo funcionamento do programa. Ela lê um arquivo 
+e o copia para dentro de um vetor. Esse vetor é analisado e as estruturas de comentários 
+e linhas em branco são contabilizadas. Após isso o programa retorna o número de linhas 
+úteis em um programa
+
+Parâmetros:
+
+char nomeArquivo[] - nome do arquivo que será aberto e analisado
+int linhas_comentadas - flag para controle do programa
+int linhas_vazias - flag para controle do programa
+
+Assertiva de entrada:
+
+A função deve receber uma string que é o caminho para um arquivo 
+
+Assertiva de saída:
+
+A função deve retornar um inteiro que simboliza o número de linhas válidas existentes
+
+**********************************************************************************/ 
+
 int contador(char nomeArquivo[], int linhas_comentarios, int linhas_vazias) {
   FILE *pArquivo;
   unsigned int total_linhas = 0, cont = 0, c, bCom = 0, i, nCom = 0;
@@ -61,6 +87,13 @@ int contador(char nomeArquivo[], int linhas_comentarios, int linhas_vazias) {
     if (texto[i] == '\n') {
       linhaVaz = 1;
       ContVaz = 1;
+    }
+  }
+
+  // Garantindo o não acesso de uma posição negativa do array
+  if (count > 3) {
+    if (texto[count-2] == '\n') {
+      num_vazias++;
     }
   }
   return total_linhas+1 - nCom - nVazias;
