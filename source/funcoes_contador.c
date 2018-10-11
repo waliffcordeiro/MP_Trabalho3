@@ -21,5 +21,33 @@ int contador(char nomeArquivo[], int linhas_comentarios, int linhas_vazias) {
     fclose(pArquivo);
   }
 
+  for (i = 0; i < count-1; i++) {
+
+    //--------- contando comentários-------------------------
+
+    if (texto[i] == '/' && texto[i+1] == '*') {  // Inicio do comentario
+      bCom = 1;
+      num_Com++;
+    }
+    // Quebra de linha no bloco de comentario
+    if (bCom == 1 && texto[i] == '\n') {
+      num_Com++;
+    }
+    if (texto[i] == '*' && texto[i+1] == '/') {  // Fim do comentario em bloco
+      bCom = 0;
+    }
+    // Comentario feito apos algum codigo (mesma linha)
+    // Posição atual de texto e próxima posição
+    if (texto[i] == '/' && texto[i+1] == '/') {
+      if (Com_flag == 1 && texto[i] != ' ') {
+        num_Com++;
+      } else {
+        Com_flag = 0;
+      }
+    }
+    if (texto[i] == '\n') {
+      Com_flag = 1;
+    }
+  }
   return total_linhas+1 - nCom - nVazias;
 }
