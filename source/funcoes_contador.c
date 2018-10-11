@@ -48,6 +48,20 @@ int contador(char nomeArquivo[], int linhas_comentarios, int linhas_vazias) {
     if (texto[i] == '\n') {
       Com_flag = 1;
     }
+
+    // ---------------Contar Vazias---------------
+    // Se for linha vazia e houver quebra de linha, acrescenta numero de vazias
+    if (linhaVaz == 1 && ContVaz == 1 && texto[i] == '\n') {
+      num_vazias++;
+      linhaVaz = 0;
+    }
+    if (linhaVaz == 1 && texto[i] != ' ' && texto[i] != '\n') {
+      ContVaz = 0;
+    }
+    if (texto[i] == '\n') {
+      linhaVaz = 1;
+      ContVaz = 1;
+    }
   }
   return total_linhas+1 - nCom - nVazias;
 }
